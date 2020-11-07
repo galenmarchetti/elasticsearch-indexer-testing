@@ -11,19 +11,19 @@ import (
 )
 
 const (
-	exampleServiceTestVolumeMountpoint = "/shared"
+	elasticSearchServiceTestVolumeMountpoint = "/shared"
 )
 
 type ExampleServiceInitializerCore struct{}
 
 func (e ExampleServiceInitializerCore) GetUsedPorts() map[int]bool {
 	return map[int]bool{
-		exampleServicePort: true,
+		defaultElasticSearchHttpPort: true,
 	}
 }
 
 func (e ExampleServiceInitializerCore) GetServiceFromIp(ipAddr string) services.Service {
-	return ExampleServiceImpl{IPAddr: ipAddr}
+	return ElasticSearchImpl{IPAddr: ipAddr}
 }
 
 func (e ExampleServiceInitializerCore) GetFilesToMount() map[string]bool {
@@ -37,7 +37,7 @@ func (e ExampleServiceInitializerCore) InitializeMountedFiles(mountedFiles map[s
 }
 
 func (e ExampleServiceInitializerCore) GetTestVolumeMountpoint() string {
-	return exampleServiceTestVolumeMountpoint
+	return elasticSearchServiceTestVolumeMountpoint
 }
 
 func (e ExampleServiceInitializerCore) GetStartCommand(mountedFileFilepaths map[string]string, ipPlaceholder string, dependencies []services.Service) ([]string, error) {

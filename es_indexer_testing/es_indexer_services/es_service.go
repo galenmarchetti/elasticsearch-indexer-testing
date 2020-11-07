@@ -9,8 +9,8 @@ import (
 	"github.com/kurtosis-tech/kurtosis-go/lib/services"
 )
 
-type ExampleService interface {
+type ElasticSearchService interface {
 	services.Service
 
-	GetHelloWorldSocket() Socket
+	GetHttpSocket() Socket
 }

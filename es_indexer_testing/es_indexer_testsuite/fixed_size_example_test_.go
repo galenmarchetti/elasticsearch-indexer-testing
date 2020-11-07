@@ -7,7 +7,7 @@ package es_indexer_testsuite
 
 import (
 	"fmt"
-	"github.com/galenmarchetti/elasticsearch-indexer-testing/es_indexer_testing/es_indexer_networks/fixed_size_example_network"
+	"github.com/galenmarchetti/elasticsearch-indexer-testing/es_indexer_testing/es_indexer_networks/fixed_size_es_network"
 	"github.com/kurtosis-tech/kurtosis-go/lib/networks"
 	"github.com/kurtosis-tech/kurtosis-go/lib/testsuite"
 	"github.com/palantir/stacktrace"
@@ -26,7 +26,7 @@ type FixedSizeExampleTest struct {
 
 func (test FixedSizeExampleTest) Run(network networks.Network, context testsuite.TestContext) {
 	// NOTE: We have to do this as the first line of every test because Go doesn't have generics
-	castedNetwork := network.(fixed_size_example_network.FixedSizeExampleNetwork)
+	castedNetwork := network.(fixed_size_es_network.FixedSizeExampleNetwork)
 
 	for i := 0; i < castedNetwork.GetNumNodes(); i++ {
 		logrus.Infof("Making query against node #%v...", i)
@@ -44,7 +44,7 @@ func (test FixedSizeExampleTest) Run(network networks.Network, context testsuite
 }
 
 func (test FixedSizeExampleTest) GetNetworkLoader() (networks.NetworkLoader, error) {
-	return fixed_size_example_network.NewFixedSizeExampleNetworkLoader(numNodes, test.ServiceImage), nil
+	return fixed_size_es_network.NewFixedSizeExampleNetworkLoader(numNodes, test.ServiceImage), nil
 }
 
 func (test FixedSizeExampleTest) GetExecutionTimeout() time.Duration {

@@ -16,8 +16,8 @@ import (
 type ExampleAvailabilityCheckerCore struct{}
 
 func (e ExampleAvailabilityCheckerCore) IsServiceUp(toCheck services.Service, dependencies []services.Service) bool {
-	castedService := toCheck.(ExampleService)
-	socket := castedService.GetHelloWorldSocket()
+	castedService := toCheck.(ElasticSearchService)
+	socket := castedService.GetHttpSocket()
 	url := fmt.Sprintf("http://%v:%v", socket.IPAddr, socket.Port)
 
 	httpClient := http.Client{

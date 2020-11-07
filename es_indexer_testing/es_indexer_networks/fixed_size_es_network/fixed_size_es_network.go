@@ -3,7 +3,7 @@
  * All Rights Reserved.
  */
 
-package fixed_size_example_network
+package fixed_size_es_network
 
 import (
 	"fmt"

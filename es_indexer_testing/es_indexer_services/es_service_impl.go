@@ -6,15 +6,15 @@
 package es_indexer_services
 
 const (
-	exampleServicePort = 80
+	defaultElasticSearchHttpPort = 9200
 )
-type ExampleServiceImpl struct{
+type ElasticSearchImpl struct{
 	IPAddr string
 }
 
-func (e ExampleServiceImpl) GetHelloWorldSocket() Socket {
+func (e ElasticSearchImpl) GetHttpSocket() Socket {
 	return Socket{
 		IPAddr: e.IPAddr,
-		Port: exampleServicePort,
+		Port: defaultElasticSearchHttpPort,
 	}
 }
