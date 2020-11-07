@@ -1,4 +1,4 @@
-module github.com/galenmarchetti/kurtosis-elasticsearch
+module github.com/galenmarchetti/elasticsearch-indexer-testing
 
 go 1.13
 
