@@ -58,8 +58,8 @@ func (loader FixedSizeExampleNetworkLoader) ConfigureNetwork(builder *networks.S
 	builder.AddConfiguration(
 		vanillaConfigId,
 		loader.serviceImage,
-		es_indexer_services.ExampleServiceInitializerCore{},
-		es_indexer_services.ExampleAvailabilityCheckerCore{})
+		es_indexer_services.ElasticSearchServiceInitializerCore{},
+		es_indexer_services.ElasticSearchAvailabilityCheckerCore{})
 	return nil
 }
 

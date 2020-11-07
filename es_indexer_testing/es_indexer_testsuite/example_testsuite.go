@@ -20,7 +20,6 @@ func NewExampleTestsuite(serviceImage string) *ExampleTestsuite {
 
 func (suite ExampleTestsuite) GetTests() map[string]testsuite.Test {
 	return map[string]testsuite.Test{
-		"singleNodeExampleTest": SingleNodeExampleTest{ServiceImage: suite.serviceImage},
 		"fixedSizeExampleTest": FixedSizeExampleTest{ServiceImage: suite.serviceImage},
 	}
 }

@@ -13,9 +13,9 @@ import (
 	"time"
 )
 
-type ExampleAvailabilityCheckerCore struct{}
+type ElasticSearchAvailabilityCheckerCore struct{}
 
-func (e ExampleAvailabilityCheckerCore) IsServiceUp(toCheck services.Service, dependencies []services.Service) bool {
+func (e ElasticSearchAvailabilityCheckerCore) IsServiceUp(toCheck services.Service, dependencies []services.Service) bool {
 	castedService := toCheck.(ElasticSearchService)
 	socket := castedService.GetHttpSocket()
 	url := fmt.Sprintf("http://%v:%v", socket.IPAddr, socket.Port)
@@ -33,7 +33,7 @@ func (e ExampleAvailabilityCheckerCore) IsServiceUp(toCheck services.Service, de
 	}
 }
 
-func (e ExampleAvailabilityCheckerCore) GetTimeout() time.Duration {
+func (e ElasticSearchAvailabilityCheckerCore) GetTimeout() time.Duration {
 	return 30 * time.Second
 }
 
