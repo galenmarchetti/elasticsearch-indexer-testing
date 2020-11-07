@@ -13,7 +13,7 @@ RUN go build -o testsuite es_indexer_testing/main.go
 
 CMD ./testsuite \
     `# ------------- Custom variable particular to this test suite -----------------` \
-    --service-image=${EXAMPLE_SERVICE_IMAGE} \
+    --es-service-image=${ES_SERVICE_IMAGE} \
     `# ------------------Kurtosis-specific environment variables -------------------` \
     `# See: https://github.com/kurtosis-tech/kurtosis-docs/blob/master/testsuite-details.md` \
     --kurtosis-api-ip=${KURTOSIS_API_IP} \

@@ -45,7 +45,7 @@ func main() {
 
 	// -------------------- Testsuite-custom params ----------------------------------
 	serviceImageArg := flag.String(
-		"service-image",
+		"es-service-image",
 		"",
 		"Name of Docker image that will be used to launch service containers")
 
