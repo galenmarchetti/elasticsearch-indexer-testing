@@ -102,7 +102,7 @@ if "${do_run}"; then
     mkdir -p "${KURTOSIS_DIRPATH}"
 
     # Docker only allows you to have spaces in the variable if you escape them or use a Docker env file
-    custom_env_vars_json_flag="CUSTOM_ENV_VARS_JSON={\"ES_SERVICE_IMAGE\":\"nginxdemos/hello\"}"
+    custom_env_vars_json_flag="CUSTOM_ENV_VARS_JSON={\"ES_SERVICE_IMAGE\":\"elasticsearch\"}"
 
     docker run \
         `# The Kurtosis initializer runs inside a Docker container, but needs to access to the Docker engine; this is how to do it` \
