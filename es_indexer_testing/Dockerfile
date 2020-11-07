@@ -9,7 +9,7 @@ RUN go mod download
 COPY . .
 
 # Build the application
-RUN go build -o testsuite es-indexer-testing/main.go
+RUN go build -o testsuite es_indexer_testing/main.go
 
 CMD ./testsuite \
     `# ------------- Custom variable particular to this test suite -----------------` \

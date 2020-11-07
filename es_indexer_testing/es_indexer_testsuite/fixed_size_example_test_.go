@@ -3,11 +3,11 @@
  * All Rights Reserved.
  */
 
-package example_testsuite
+package es_indexer_testsuite
 
 import (
 	"fmt"
-	"github.com/galenmarchetti/elasticsearch-indexer-testing/es-indexer-testing/example_networks/fixed_size_example_network"
+	"github.com/galenmarchetti/elasticsearch-indexer-testing/es_indexer_testing/es_indexer_networks/fixed_size_example_network"
 	"github.com/kurtosis-tech/kurtosis-go/lib/networks"
 	"github.com/kurtosis-tech/kurtosis-go/lib/testsuite"
 	"github.com/palantir/stacktrace"

@@ -3,7 +3,7 @@
  * All Rights Reserved.
  */
 
-package example_services
+package es_indexer_services
 
 import (
 	"fmt"
