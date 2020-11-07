@@ -7,7 +7,7 @@ package fixed_size_example_network
 
 import (
 	"fmt"
-	"github.com/galenmarchetti/kurtosis-elasticsearch/example_impl/example_services"
+	"github.com/galenmarchetti/elasticsearch-indexer-testing/example_impl/example_services"
 	"github.com/kurtosis-tech/kurtosis-go/lib/networks"
 	"github.com/kurtosis-tech/kurtosis-go/lib/services"
 	"github.com/palantir/stacktrace"

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/kurtosis-go.iml" filepath="$PROJECT_DIR$/.idea/kurtosis-go.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/elasticsearch-indexer-testing.iml" filepath="$PROJECT_DIR$/.idea/elasticsearch-indexer-testing.iml" />
     </modules>
   </component>
 </project>
