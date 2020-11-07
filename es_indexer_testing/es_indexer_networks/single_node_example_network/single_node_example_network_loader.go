@@ -32,7 +32,7 @@ func NewSingleNodeExampleNetwork(rawNetwork *networks.ServiceNetwork) *SingleNod
 	}
 }
 
-func (network *SingleNodeExampleNetwork) AddTheNode() (es_indexer_services.ExampleService, error) {
+func (network *SingleNodeExampleNetwork) AddTheNode() (es_indexer_services.ElasticSearchService, error) {
 	if network.theNodeAdded {
 		return nil, stacktrace.NewError("The node is already added")
 	}
@@ -50,7 +50,7 @@ func (network *SingleNodeExampleNetwork) AddTheNode() (es_indexer_services.Examp
 	if err != nil {
 		return nil, stacktrace.Propagate(err, "An error occurred getting the node's service information")
 	}
-	castedService := serviceNode.Service.(es_indexer_services.ExampleService)
+	castedService := serviceNode.Service.(es_indexer_services.ElasticSearchService)
 	return castedService, nil
 }
 

@@ -28,7 +28,7 @@ func (network FixedSizeExampleNetwork) GetNumNodes() int {
 	return network.numNodes
 }
 
-func (network *FixedSizeExampleNetwork) GetService(idInt int) (es_indexer_services.ExampleService, error) {
+func (network *FixedSizeExampleNetwork) GetService(idInt int) (es_indexer_services.ElasticSearchService, error) {
 	if idInt < 0 || idInt >= network.numNodes {
 		return nil, stacktrace.NewError("Invalid service ID '%v'", idInt)
 	}
@@ -37,7 +37,7 @@ func (network *FixedSizeExampleNetwork) GetService(idInt int) (es_indexer_servic
 	if err != nil {
 		return nil, stacktrace.Propagate(err, "An error occurred getting the service node info")
 	}
-	castedService := serviceNode.Service.(es_indexer_services.ExampleService)
+	castedService := serviceNode.Service.(es_indexer_services.ElasticSearchService)
 	return castedService, nil
 }
 
