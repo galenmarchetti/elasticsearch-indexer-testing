@@ -6,7 +6,7 @@
 package single_node_example_network
 
 import (
-	"github.com/galenmarchetti/elasticsearch-indexer-testing/example_impl/example_services"
+	"github.com/galenmarchetti/elasticsearch-indexer-testing/es-indexer-testing/example_services"
 	"github.com/kurtosis-tech/kurtosis-go/lib/networks"
 	"github.com/kurtosis-tech/kurtosis-go/lib/services"
 	"github.com/palantir/stacktrace"

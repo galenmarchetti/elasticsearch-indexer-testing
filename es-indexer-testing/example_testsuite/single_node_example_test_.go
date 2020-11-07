@@ -7,7 +7,7 @@ package example_testsuite
 
 import (
 	"fmt"
-	"github.com/galenmarchetti/elasticsearch-indexer-testing/example_impl/example_networks/single_node_example_network"
+	"github.com/galenmarchetti/elasticsearch-indexer-testing/es-indexer-testing/example_networks/single_node_example_network"
 	"github.com/kurtosis-tech/kurtosis-go/lib/networks"
 	"github.com/kurtosis-tech/kurtosis-go/lib/testsuite"
 	"github.com/palantir/stacktrace"
