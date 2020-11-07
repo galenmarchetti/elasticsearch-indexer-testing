@@ -32,7 +32,7 @@ func (test SingleNodeExampleTest) Run(network networks.Network, context testsuit
 	logrus.Info("Successfully added the test node")
 
 	logrus.Info("Making a query to the node...")
-	socket := service.GetHelloWorldSocket()
+	socket := service.GetHttpSocket()
 	serviceUrl := fmt.Sprintf("http://%v:%v", socket.IPAddr, socket.Port)
 	if _, err := http.Get(serviceUrl); err != nil {
 		context.Fatal(stacktrace.Propagate(err, "Received an error when calling the example service endpoint"))
